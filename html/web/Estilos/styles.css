@@ -1,0 +1,221 @@
+
+/* --------------------header------------------- */
+.encabezado {
+  background-image: url('../Imagenes/paisajeFondoCabezera.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: 10% 10%;/* Centra la imagen en el contenedor */
+  color: #fff; /* Color del texto en el encabezado (cambia según tu diseño) */
+  text-align: center; /* Alinea el texto al centro */
+  /* padding: 100px 0; */
+  height: 10%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  /* padding: 10px; */
+  /* margin-bottom: 100px; */
+  position: relative;
+  margin-bottom: 2%;
+}
+.encabezado h1{
+  margin: auto;
+  transform: translateX(-15%);
+  width: 100%;
+}
+.index{
+  height: 8%;
+}
+
+.encabezado .title {
+  display: flex;
+  align-items: center;
+}
+
+.encabezado .title img {
+  width: 80px;
+  margin-right: 280px;
+  border-radius: 80px;
+  margin-left: 3%;
+}
+
+.encabezado .title h1 {
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+
+}
+
+
+.encabezado .menu a {
+  padding: 5px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin: 3%;
+}
+
+.encabezado .menu {
+  grid-area: menu;
+  text-align: right;
+  margin-right: 2%;
+}
+
+.encabezado .menu a {
+  padding: 5px;
+  position: relative;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 2px 1%;
+  
+}
+.encabezado .menu a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+    transition: 2s ease;
+
+}
+.encabezado .menu a:hover::before{
+  width: 100%;
+  opacity: 1;
+}
+ 
+
+/* Formulario de contacto */
+
+body{
+  max-width: 100%;
+  margin-bottom: 120px;
+}
+
+
+
+
+
+/* Pagina Blog */
+
+.Pagina-Blog {
+  display: flex;
+  flex-direction: column; 
+  align-items: left;
+}
+
+.Pagina-Blog article h3{
+
+  background-color: #5e310e;
+  border: solid 5px black;
+}
+
+.Pagina-Blog article p {
+  background-color: #5e310e;
+  border: solid 5px black;
+  height: 300px;
+}
+
+.Pagina-Blog article {
+  width: 80%; 
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.Pagina-Blog article img {
+  width: 200px;
+  height: auto;
+  border-radius: 0px;
+  max-width: 50%; 
+  height: auto; 
+}
+
+.Pagina-Blog article p {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #666;
+}
+
+ /* Sobre Mi */
+
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+h2 {
+  margin: 80px;
+  background-color: #5e310e;
+  border: solid 5px black;
+  text-align: center;
+  align-items: center;
+}
+
+.sobre-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.imagen-container {
+  flex: 1;
+  max-width: 300px;
+}
+
+.imagen-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 230px;
+}
+
+.descripcion {
+  background-color: #5e310e;
+  border: solid 5px black;
+  flex: 2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.descripcion{
+  color: #fff;
+}
+
+/* Diseño Responsive */
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .encabezado .img logo {
+    margin-right: 20px; 
+    
+
+  }
+
+  .encabezado .menu {
+    text-align: center;
+  }
+
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .info-presentacion-basica,
+  .ImgBtn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ImgBtn img {
+    margin-right: 0;
+  }
+  
+  .formulario form {
+    width: 100%; /* Ocupa el 100% del ancho en dispositivos móviles */
+  }
+}

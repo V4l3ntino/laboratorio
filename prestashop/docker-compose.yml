@@ -1,0 +1,23 @@
+version: "3"
+services:
+  PS:
+    image: prestashop/prestashop:1.7.8.6
+    volumes:
+      - ./data:/var/www/html 
+    ports:
+      - "8099:80" 
+    restart: always
+    depends_on:
+      - DB
+
+  DB:
+    image: mysql
+    container_name: MYSQL
+    restart: always
+    environment:
+      - MYSQL_DATABASE=exampledb
+      - MYSQL_USER=userps
+      - MYSQL_PASSWORD=passps
+      - MYSQL_ROOT_PASSWORD=12345
+    volumes:
+      - ./db:/var/lib/mysql

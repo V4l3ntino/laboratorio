@@ -1,0 +1,317 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-image: url('../Imagenes/FondoBody.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+
+
+/* --------------------main-------------------- */
+    header{
+        background-image: url(/Nico/Imagenes/paisajeFondoCabezera.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 10% 10%;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+    header article {
+        display: flex;
+        align-items: center;
+        padding-top: 3%;
+    }
+    .boximage{
+        width: 200px;
+        height: 100px;
+    }
+    .boximage img{
+      width: 100%;
+      margin-left: 20%;
+    }
+    .title h1{
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+    }
+    header .menu{
+        width: 30%;
+    }
+    .boxmenu{
+        display: flex;
+        justify-content: end;
+        font-size: 15px;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+    }
+    .menu a{
+        margin: 2% 3%;
+    }
+    .menu a{
+        position: relative;
+        padding: 3px 2%;
+        text-decoration: none;
+        color: white;
+    }
+    .menu a:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        height: 5px;
+        opacity: 0;
+        border-bottom: solid 2px white;
+        border-left: solid 1px white;
+        transition: 2s;
+    }
+    .menu a:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 5px;
+        opacity: 0;
+        border-right: solid 2px white;
+        border-top: solid 1px white;
+        transition: 2s;
+    }
+    .menu a:hover::before{
+        width: 100%;
+        /* height: 100%; */
+        opacity: 1;
+    }
+    .menu a:hover::after{
+        width: 100%;
+        /* height: 100%; */
+        opacity: 1;
+    }
+    .menu a:hover{
+      transition-delay:2s;
+      box-shadow: black 0px 0px 30px;
+      background-color: white;
+      color: black;
+      overflow: hidden;
+      transition: 0.5s;
+      transition-delay:2s;
+    }
+
+  /* Presentacion basica */
+
+  .contenido-presentacion-basica {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    position: relative;
+  }
+
+  .info-presentacion-basica {
+    padding: 10px;
+    background-color: #5e310e;
+    border: solid 5px black;
+    width: 60%;
+  }
+
+  .ImgBtn {
+   position: relative;
+   width: 300px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: left;
+
+  }
+
+  .info-presentacion-basica h2 {
+    color: #fff;
+  }
+
+  .info-presentacion-basica p {
+    color: #fff;
+    text-align: left;
+    border: solid 1px black;
+    width: 100%;
+  }
+
+  .contenido{
+    background-color: rgba(94, 49, 14, 0.66);
+    color: white;
+    backdrop-filter: blur(20px);
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+    width: 60%;
+    padding: 4%;
+    transform: translateY(-15%);
+  }
+  .contenido h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .ImgBtn{
+    height: 400px;
+    width: 200px;
+    transform: translateX(0);
+  }
+  .ImgBtn:hover img{
+    transform: rotateY(180deg);
+  }
+  .ImgBtn img {
+
+    border-radius: 50%;
+    max-width: 100%;
+    margin-bottom: 5%;
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+    transition: 1s;
+  }
+  .ImgBtn img:hover{
+    box-shadow: 0 0 30px black;
+    border-radius: 10%;
+    scale: 1.1;
+    /* transform: rotateY(180deg); */
+  }
+
+  .ImgBtn button {
+    padding: 20px;
+    color: #94854b;
+    background-color: #daac63;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+    border: solid 5px black;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .ImgBtn button a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #94854b;
+    background-color: #daac63;
+    color: #fff;
+    border-radius:40px ;
+    transition: background-color 0.3s ease;
+  }
+
+  .ImgBtn button a:hover {
+    border-radius: 40px;
+    color: #fff;
+    background-color: #991313;
+  }
+
+
+  /* Contenido Visual Pre-Blog */
+
+  .contenido-visual-blog {
+    margin: 5% 0 10% 0;
+  }
+
+  .contenido-visual-blog h2 {
+    color: #fff;
+    text-align: center;
+    background-color: rgba(94, 49, 14, 0.66);
+    backdrop-filter: blur(20px);
+    height: 5%;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border: solid rgba(255, 255, 255, 0.3);
+  }
+
+  .contenido-visual-blog section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+
+  }
+  .contenido-visual-blog .artic-1{ 
+      padding: 2%;
+  }
+  .contenido-visual-blog .artic-3{ 
+    padding: 2%;
+}
+
+  .contenido-visual-blog article {
+    flex: 1;
+    color: #fff;
+    border: solid 5px black;
+    padding: 10px;
+    background-color: rgba(94, 49, 14, 0.8);
+    backdrop-filter: blur(20px);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  .contenido-visual-blog article iframe{
+    margin:3% 0 3% 0
+  }
+  .contenido-visual-blog button {
+    padding: 20px;
+    color: #94854b;
+    background-color: #daac63;
+    border-radius: 0px;
+    /* margin: auto; */
+    width: 50%;
+    margin: auto;
+    border: solid 5px black;
+  }
+
+  .contenido-visual-blog button a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #94854b;
+    background-color: #daac63;
+    color: #fff;
+    border-radius:30px ;
+    transition: background-color 0.3s ease;
+  }
+
+  .contenido-visual-blog button:hover a {
+    border-radius: 40px;
+    color: #fff;
+    background-color: #991313;
+  }
+  /* Pie */
+
+  footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }

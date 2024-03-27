@@ -1,0 +1,58 @@
+<!doctype html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout"
+>
+<head th:replace="components/header">
+</head>
+<body class="container-fluid">
+    <header th:insert="~{layout/components/header :: headerbase}">
+    </header>
+
+    <div layout:fragment="MainContent"
+         id="main" style="min-height: 75%"
+         class="d-flex flex-row align-items-start justify-content-around border p-2">
+        <nav
+             class="d-flex flex-column align-items-center justify-content-center border"
+             style="width: 15%; height: 100%; padding: 10% 0 10% 0">
+            <a class="border bg-primary text-white p-2" style="width:90%" href="http://localhost:8080/">
+                Home
+            </a>
+            <a class="border bg-secondary text-white p-2" style="width:90%"  href="http://localhost:8080/students">
+                Listar Students
+            </a>
+            <a class="border  bg-info text-white p-2" style="width:90%"  href="http://localhost:8080/students/new">
+                Nuevo Student
+            </a>
+        </nav>
+        <section class="border" style="width: 70%">
+            <div layout:fragment="SectionContent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4" th:each="student: ${students}">
+                            <div class="card mb-3">
+                                <img th:src="'https://unavatar.io/' + ${student.id}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${student.firstName}">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a th:href="@{/students/detail/{id}(id=${student.id})}" class="btn btn-primary">Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="border"  style="width: 15%; min-height:500px">
+            Favoritos
+        </aside>
+    </div>
+    <footer class="fixed-bottom text-center border">
+        <h5 class="text-center"> Librería Picasso - Todos lo derechos reservados</h5>
+    </footer>
+
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/webjars/popper.js/umd/popper.min.js"></script>
+
+</body>
+</html>
